@@ -1,0 +1,44 @@
+﻿@model toDoList.Models.ToDo
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="primary">
+    <input class="urlInput" type="text" placeholder="Paste the link here...">
+    <button class="submit urlButton">Submit</button>
+    <div class="results hidden">
+        <button class="copy urlButton">Copy</button>
+    </div>
+    <a href="#" class="clear hidden">Clear</a>
+</div>
+
+
+<div id="toDoTable"></div>
+<div id="todoCreateTask">
+    @using (Ajax.BeginForm("AJAXCreate", "ToDoes", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "toDoTable"
+    }))
+    {
+        <div class="form-group">
+            @Html.AntiForgeryToken()
+            <div>
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Custom_Scripts/BuildTable.js"></script>
+    <script src="~/Custom_Scripts/UrlShortener.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
