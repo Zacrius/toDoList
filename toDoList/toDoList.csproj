@@ -194,7 +194,6 @@
     <Content Include="Custom_Scripts\AddCheckboxListener.js" />
     <Content Include="Custom_Scripts\AjaxDeleteTask.js" />
     <Content Include="Custom_Scripts\BuildTable.js" />
-    <Content Include="Custom_Scripts\CountdownTimer.js" />
     <Content Include="Custom_Scripts\UrlShortener.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
