@@ -192,7 +192,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Custom_Scripts\AddCheckboxListener.js" />
-    <Content Include="Custom_Scripts\AjaxDeleteTask.js" />
     <Content Include="Custom_Scripts\BuildTable.js" />
     <Content Include="Custom_Scripts\UrlShortener.js" />
     <Content Include="favicon.ico" />
