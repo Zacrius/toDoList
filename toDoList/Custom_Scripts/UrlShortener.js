@@ -1,5 +1,5 @@
 ﻿const urlInput = document.querySelector(".urlInput");
-const url = window.location.href;
+const url = "https://shorts.glitch.me/new/";
 const result = document.querySelector(".result");
 const results = document.querySelector(".results");
 const copy = document.querySelector(".copy");
